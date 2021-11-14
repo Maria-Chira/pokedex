@@ -27,7 +27,7 @@ const BestPokemon = () => {
 
 const CaughtPokemon = () => {
   let todayDate = new Date().toLocaleDateString();
-  return <p>Caught 0 Pokemon on {todayDate}</p>; 
+  return <p>Caught 0 Pokemon on {todayDate}</p>;
 };
 
 const App = () => {

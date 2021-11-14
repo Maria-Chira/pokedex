@@ -1,25 +1,27 @@
-import logo from "./logo.svg";
-import "./App.css";
+import React from "react";
+import Heading from "./Heading.js";
+import Image from "./Image.js";
+import List from "./List.js";
+import DateToday from "./DateToday.js";
 
-function App() {
+
+const MainParag = (props) => {
+  return <p>My favourite Pokemon is {props.name}</p>;
+};
+
+
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Heading />
+      <Image img="https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png" />
+      <MainParag name="Doe"/>
+      <List />
+      <DateToday date={new Date().toLocaleDateString()}/>
     </div>
   );
-}
+};
 
 export default App;

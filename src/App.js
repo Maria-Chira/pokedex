@@ -6,10 +6,13 @@ import CaughtPokemon from "./CaughtPokemon";
 
 const App = () => {
   let abilities = ["Anticipation","Adaptability","Run-Away"];
-   let todayDate = new Date().toLocaleDateString();
+  let todayDate = new Date().toLocaleDateString();
+  function logWhenClicked() {
+    console.log("test");
+  }
   return (
     <div>
-      <Logo appName="Pokedex" />
+      <Logo onClick={logWhenClicked} appName="Pokedex" />
       <BestPokemon abilities={abilities} />
       <CaughtPokemon todayDate={todayDate} />
     </div>
